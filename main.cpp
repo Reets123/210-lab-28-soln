@@ -55,23 +55,38 @@ int main() {
     
     // Goat Manager 3001 Engine
     int sel = main_menu();
-    while (sel != 4) {
+    while (sel != 12) { // Changed to 12 for new menu options
         switch (sel) {
             case 1:
                 cout << "Adding a goat.\n";
                 add_goat(trip, names, colors);
                 break;
-            case 2:    
+            case 2:
                 cout << "Removing a goat.\n";
                 delete_goat(trip);
                 break;
-            case 3:    
+            case 3:
                 cout << "Displaying goat data.\n";
                 display_trip(trip);
                 break;
-            default:
-                cout << "Invalid selection.\n";
+            case 4:
+                cout << "Sorting goats by name.\n";
+                sort_goats(trip);
                 break;
+            case 5:
+                cout << "Find a goat by name.\n";
+                find_goat(trip);
+                break;
+            case 6:
+                cout << "First goat in the trip:\n";
+                first_goat(trip);
+                break;
+            case 7:
+                cout << "Last goat in the trip:\n";
+                last_goat(trip);
+                break;
+            case 8:
+                cout << "Rev
         }
         sel = main_menu();
     }
