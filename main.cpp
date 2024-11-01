@@ -1,6 +1,10 @@
+// Lab 28: STL Algorithms 
+// COMSC-210 - Ibrahim Alatig 
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <algorithm> 
 #include <list>
 #include "Goat.h"
 using namespace std;
@@ -11,6 +15,13 @@ int select_goat(list<Goat> trip);
 void delete_goat(list<Goat> &trip);
 void add_goat(list<Goat> &trip, string [], string []);
 void display_trip(list<Goat> trip);
+void sort_goats(list<Goat> &trip);
+void find_goat(list<Goat> trip);
+void first_goat(list<Goat> trip);
+void last_goat(list<Goat> trip);
+void reverse_trip(list<Goat> &trip);
+void unique_colors(list<Goat> trip);
+void count_goats_in_age_range(list<Goat> trip);
 int main_menu();
 
 int main() {
