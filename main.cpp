@@ -86,7 +86,24 @@ int main() {
                 last_goat(trip);
                 break;
             case 8:
-                cout << "Rev
+                cout << "Reversing the goat trip.\n";
+                reverse_trip(trip);
+                break;
+            case 9:
+                cout << "Listing unique colors of goats.\n";
+                unique_colors(trip);
+                break;
+            case 10:
+                cout << "Counting goats in a specified age range (0-20).\n";
+                count_goats_in_age_range(trip);
+                break;
+            case 11:
+                cout << "Resetting trip to empty.\n";
+                trip.clear();
+                break;
+            default:
+                cout << "Invalid selection.\n";
+                break;
         }
         sel = main_menu();
     }
