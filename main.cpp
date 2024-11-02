@@ -117,7 +117,15 @@ int main_menu() {
     cout << "[1] Add a goat\n";
     cout << "[2] Delete a goat\n";
     cout << "[3] List goats\n";
-    cout << "[4] Quit\n";
+    cout << "[4] Sort goats by name\n";
+    cout << "[5] Find a goat by name\n";
+    cout << "[6] Display the first goat\n";
+    cout << "[7] Display the last goat\n";
+    cout << "[8] Reverse the trip\n";
+    cout << "[9] List unique colors of goats\n";
+    cout << "[10] Count goats in an age range\n";
+    cout << "[11] Clear the trip\n";
+    cout << "[12] Quit\n";
     cout << "Choice --> ";
     int choice;
     cin >> choice;
