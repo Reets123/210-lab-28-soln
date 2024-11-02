@@ -108,7 +108,6 @@ int main() {
         sel = main_menu();
     }
     
-
     return 0;
 }
 
@@ -129,8 +128,9 @@ int main_menu() {
     cout << "Choice --> ";
     int choice;
     cin >> choice;
-    while (choice < 1 || choice > 4) {
-        cout << "Invalid, again --> ";
+
+    while (choice < 1 || choice > 12) {
+        cout << "Invalid choice, again --> ";
         cin >> choice;
     }
     return choice;
