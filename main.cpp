@@ -225,4 +225,18 @@ void reverse_trip(list<Goat> &trip) {
 
 void unique_colors(list<Goat> trip) {
     list<string> colors;
-    for (const auto &g 
+    for (const auto &g : trip) {
+        if (find(colors.begin(), colors.end(), g.get_color()) == colors.end())
+            colors.push_back(g.get_color());
+    }
+    
+    cout << "Unique colors of goats:\n";
+    for (const auto &color : colors) {
+        cout << color << endl;
+    }
+}
+
+void count_goats_in_age_range(list<Goat> trip) {
+    int minAge, maxAge;
+    cout << "Enter minimum age: ";
+    cin >> minAge;
