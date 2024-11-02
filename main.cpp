@@ -205,4 +205,24 @@ void first_goat(list<Goat> trip) {
         cout << it->get_name() << " (" << it->get_age() 
              << ", " << it->get_color() << ")\n";
     } else {
-        cout << "No go
+        cout << "No goats in the trip.\n";
+    }
+}
+
+void last_goat(list<Goat> trip) {
+    if (!trip.empty()) {
+        auto it = --trip.end(); // decrement iterator to get last goat
+        cout << it->get_name() << " (" << it->get_age() 
+             << ", " << it->get_color() << ")\n";
+    } else {
+        cout << "No goats in the trip.\n";
+    }
+}
+
+void reverse_trip(list<Goat> &trip) {
+    trip.reverse();
+}
+
+void unique_colors(list<Goat> trip) {
+    list<string> colors;
+    for (const auto &g 
