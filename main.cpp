@@ -188,4 +188,21 @@ void find_goat(list<Goat> trip) {
     cin >> name;
 
     auto it = find_if(trip.begin(), trip.end(),
-                      [&](const Goa
+                      [&](const Goat &g) { return g.get_name() == name; });
+    
+    if (it != trip.end()) {
+        cout << "Goat found: " << it->get_name() 
+             << " (" << it->get_age() 
+             << ", " << it->get_color() << ")\n";
+    } else {
+        cout << "Goat not found.\n";
+    }
+}
+
+void first_goat(list<Goat> trip) {
+    if (!trip.empty()) {
+        auto it = trip.begin();
+        cout << it->get_name() << " (" << it->get_age() 
+             << ", " << it->get_color() << ")\n";
+    } else {
+        cout << "No go
