@@ -177,3 +177,15 @@ int select_goat(list<Goat> trp) {
     }
     return input;
 }
+
+void sort_goats(list<Goat> &trip) {
+    trip.sort(); // Sorts the list in place based on goat names
+}
+
+void find_goat(list<Goat> trip) {
+    string name;
+    cout << "Enter the name of the goat to find: ";
+    cin >> name;
+
+    auto it = find_if(trip.begin(), trip.end(),
+                      [&](const Goa
