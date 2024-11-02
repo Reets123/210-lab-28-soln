@@ -239,4 +239,11 @@ void unique_colors(list<Goat> trip) {
 void count_goats_in_age_range(list<Goat> trip) {
     int minAge, maxAge;
     cout << "Enter minimum age: ";
-    cin >> minAge;
+    cin >> minAge;cout << "Enter maximum age: ";
+    cin >> maxAge;
+
+    int count = count_if(trip.begin(), trip.end(),
+                          [&](const Goat &g) { return g.get_age() >= minAge && g.get_age() <= maxAge; });
+    
+    cout << "Number of goats in age range (" << minAge << "-" << maxAge << "): " << count << endl;
+}
